@@ -22,6 +22,8 @@ Route::group(['middleware' => 'cors'], function () {
     Route::get('/todos', 'TodosController@index');
     Route::post('/todos', 'TodosController@store');
     Route::patch('/todos/{todo}', 'TodosController@update');
+    Route::patch('/todosCheckAll', 'TodosController@updateAll');
     Route::delete('/todos/{todo}', 'TodosController@destroy');
+    Route::delete('/todosDeleteCompleted', 'TodosController@destroyCompleted');
     
 });
